@@ -1,4 +1,3 @@
-// Player class
 package org.example;
 
 public class Player {
@@ -7,6 +6,7 @@ public class Player {
     private Weapon weapon;
 
     // Constructor
+    //Sınıfın tek bir constructor metodu olmalı ve bu 3 değeri set edebilmeli.
     public Player(String name, int healthPercentage, Weapon weapon) {
         this.name = name;
         this.weapon = weapon;
@@ -40,17 +40,4 @@ public class Player {
         }
     }
 
-    // Main method for testing
-    public static void main(String[] args) {
-        Player player = new Player("John", 120, Weapon.SWORD);
-        System.out.println("Initial Health: " + player.healthRemaining());
-
-        player.loseHealth(30);
-        System.out.println("Health after damage: " + player.healthRemaining());
-
-        player.loseHealth(80);
-
-        player.restoreHealth(50);
-        System.out.println("Health after restoration: " + player.healthRemaining());
-    }
 }

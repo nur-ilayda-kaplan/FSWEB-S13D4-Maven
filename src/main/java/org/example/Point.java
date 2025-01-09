@@ -1,7 +1,8 @@
 package org.example;
 
-// Point class
+
 public class Point {
+    //Bu iki değişkene sadece bu sınıf içerisinden erişilebilinmeli.
     private int x;
     private int y;
 
@@ -28,30 +29,23 @@ public class Point {
         this.y = y;
     }
 
+    //Point sınıfı içerisinde bir tane distance isminde metod tanımlayınız.
     // Overloaded distance methods
+    //distance() hiçbir değer almazsa (0,0) noktasına göre uzaklık hesaplanmalı.
     public double distance() {
         return Math.sqrt(x * x + y * y);
     }
 
+    //distance(Point p) şeklinde başka bir Point objesi alırsa verilen noktaya göre uzaklık hesaplanmalı.
     public double distance(Point p) {
         return Math.sqrt((p.x - this.x) * (p.x - this.x) + (p.y - this.y) * (p.y - this.y));
     }
 
+    //distance(int a, int b) şeklinde 2 farklı int parametresi alınırsa (a,b) ye göre uzaklık bulunmalı.
     public double distance(int a, int b) {
         return Math.sqrt((a - this.x) * (a - this.x) + (b - this.y) * (b - this.y));
     }
 
-    // Main method for testing
-    public static void main(String[] args) {
-        Point first = new Point(6, 5);
-        Point second = new Point(3, 1);
-
-        System.out.println("distance(0,0)= " + first.distance());
-        System.out.println("distance(second)= " + first.distance(second));
-        System.out.println("distance(2,2)= " + first.distance(2, 2));
-
-        Point point = new Point(0, 0);
-        System.out.println("distance()= " + point.distance());
-    }
 }
+
 

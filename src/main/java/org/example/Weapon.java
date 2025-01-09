@@ -1,4 +1,4 @@
-// Weapon enum
+
 package org.example;
 
 public enum Weapon {
@@ -13,7 +13,7 @@ public enum Weapon {
         this.damage = damage;
         this.attackSpeed = attackSpeed;
     }
-
+// Aynı zamana bu değişkenler için getter metodları da yazılmalı.
     public int getDamage() {
         return damage;
     }
